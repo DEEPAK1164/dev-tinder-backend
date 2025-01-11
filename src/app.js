@@ -2,8 +2,9 @@ const express = require('express');
 const connectDB = require('./config/database'); // Import the database connection
 const cors=require("cors");
 const app = express();
-
 var cookieParser = require('cookie-parser')
+require('dotenv').config()
+
 
 
 
@@ -32,7 +33,7 @@ app.use("/",userRouter)
 
 connectDB().then(()=>{
 console.log("DB connected successfully!");
-app.listen(7777,()=>{
+app.listen(process.env.PORT,()=>{
   console.log("Server is running on port 7777...")
 })
 }).catch((err)=>{
