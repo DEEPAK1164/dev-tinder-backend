@@ -5,6 +5,9 @@ const app = express();
 var cookieParser = require('cookie-parser')
 require('dotenv').config()
 
+//as soon as our application load below file will 
+//get load and cron would get scheduled.
+require("./utils/cronJob");
 
 
 
