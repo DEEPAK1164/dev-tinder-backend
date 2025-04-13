@@ -46,6 +46,7 @@ const existingConnectionRequest=await ConnectionRequestModel.findOne({
 
 if(existingConnectionRequest)
 {
+  console.log(existingConnectionRequest)
   return res.status(400).send({message:"Connection Request Already Exists!"})
 }
 
